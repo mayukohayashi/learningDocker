@@ -18,4 +18,9 @@
 
 
 ## WHEN to use alpine images
-- 
+- Alpin is "small" and "sec focused"
+- Debian/Ubuntu are smaller now too
+- ~100mb space isnt significant
+- Alpine has its own issues
+- Alpine CVE scanning fails
+- Enterprise may require CentOS or Ubuntu/Debian
