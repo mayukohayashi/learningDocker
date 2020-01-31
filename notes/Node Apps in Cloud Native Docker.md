@@ -18,3 +18,30 @@
 
 - https://12factor.net/config
 - Store environment config in Environment Variables(env vars)
+- Docker & compose are great this with multiple options
+- Old apps: user CMD or ENTRYPOINT script with envsubst to pass env vars into conf files
+
+### 12 Factor: Logs
+
+- 12factor.net/logs
+- Apps shouldnt route or transport logs to anything but stdout/stderr
+- console.log() works
+- Winston/Bunyan/Morgan: use levels to control verbosity
+- Winston transport: "Console
+
+### .dockerignore
+
+- Prevent bloat and unneeded files
+  - .git/
+  - node_modules/
+  - npm-debug
+  - docker-compose\*.yml
+- Not needed but useful in image
+  - Dockerfile
+  - README.md
+
+### Migrating Traditional Apps (Assiginment4)
+
+- "Transitional App" = Pre-Docker App
+- Take a typical Node app and "migrate"
+-
