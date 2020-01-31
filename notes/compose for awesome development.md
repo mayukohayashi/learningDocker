@@ -22,9 +22,27 @@
 - DDforWin needs drive perms
 - Perms: Linux != Windows
 
-### node?modules in Images
+### node_modules in Images
 
-- Problem: we shoundt build images with node_modules from host
+- Problem: we shouldn't build images with node_modules from host
   - Example: node-gyp
 - Solution; add node_modules\ to .dockerignore
 - Lets do this to ./sample-sails
+
+### node_modules in Bind-mounts
+
+- Problem: we cant bind-mount node_modules content from host on macOS/Windows(different arch)
+- Two potential Solutions:
+  - Never use npm i on host, run npm i in compose
+  - Move modules in image, hide modules from host
+
+### node_modules in Bind-Mounts
+
+- Solution 1, simple but less flexible:
+  - You cant docker-compose up until you've used docker-compose run
+  - node_modules on host is now only usable container
+- Solution 2, more setup but flexible:
+  - move node_modules up a directory in Dockerfile
+  - Use empty volume to hide node_modules on bind-mount
+
+### NPM, Yarn, and Other Tools in Compose
