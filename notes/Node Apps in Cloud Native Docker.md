@@ -44,4 +44,16 @@
 
 - "Transitional App" = Pre-Docker App
 - Take a typical Node app and "migrate"
--
+- ./assignment-mta
+- Add .dockerignore
+- Create Dockerfile
+- Change Winston transport to Console
+- See README.md for app details
+- Image shouldn't include in, out, node_modules or logs directories
+- CHange Winston to Console winston.transports.Console
+- bind-mount in and out dirs
+- Set CHARCOAL_FACTOR to 0.1
+- Running Container with ./in and ./out bind-mounts results in new chalk images in ./out on host
+- Changing --env CHARCOAL_FACTOR changes loog og image (test with 10)
+- No .gif fimes in image
+- docker logs show Winston output
